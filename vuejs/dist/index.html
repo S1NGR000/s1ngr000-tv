@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=https://cdn.jsdelivr.net/gh/tks18/gindex-v4@v7.5.1/vuejs/dist/favicon.ico><link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css rel=preload as=style><link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css rel=stylesheet><link href=https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css rel=preload as=style><link href=https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css rel=stylesheet><link href=https://cdn.jsdelivr.net/npm/font-awesome-animation@0.2.1/dist/font-awesome-animation.min.css rel=preload as=style><link href=https://cdn.jsdelivr.net/npm/font-awesome-animation@0.2.1/dist/font-awesome-animation.min.css rel=stylesheet><title>gindex-v4</title><script>var authConfig = {
+      version: '1.1.0',
+      roots: [
+        {
+          id: "",
+          name: "Glory to Heaven",
+          pass: "",
+        },
+        {
+          id: "",
+          name: "TeamDrive",
+          pass: "",
+        },
+        {
+          id: "",
+          name: "TeamDrive",
+          pass: "",
+        }
+      ],
+    };
+    var quickLinks = [
+      {
+        displayname: "Anime", // Name to Display
+        link: "Anime", // Note: This is Case Sensitive .Give Drive Folder Name Here from Default Drive.
+      },
+      {
+        displayname: "The Cinema :-)", // Name to Display
+        link: "Movies",
+      },
+      {
+        displayname: "Courses", // Name to Display
+        link: "Courses",
+      }
+    ]
+    var routes = {
+      checkEmail: 'http://localhost:3000/checkmail',
+      loginRoute: 'http://localhost:3000/login',
+      registerRoute: 'http://localhost:3000/register/user',
+      otpRegister: 'http://localhost:3000/register/approve/otp',
+      requestRoute: 'http://localhost:3000/request/user',
+      verifyRoute: 'http://localhost:3000/user/verify',
+      changePasswordRoute: 'http://localhost:3000/user/changepassword',
+      requestadminroute: 'http://localhost:3000/request/admin',
+      requestsuperadminroute: 'http://localhost:3000/request/superadmin',
+      getPendingUsers: 'http://localhost:3000/get/pending/users',
+      getPendingAdmins: 'http://localhost:3000/get/pending/admins',
+      getPendingSuperAdmins: 'http://localhost:3000/get/pending/superadmins',
+      upgradeAdmin: 'http://localhost:3000/register/approve/admin',
+      upgradeSuperAdmin: 'http://localhost:3000/register/approve/superadmin',
+      inviteUser: 'http://localhost:3000/invite/user',
+      inviteAdmin: 'http://localhost:3000/invite/admin',
+      inviteSuperAdmin: 'http://localhost:3000/invite/superadmin',
+      addSpamUser: 'http://localhost:3000/spam/user',
+      addSpamAdmin: 'http://localhost:3000/spam/admin',
+      getSpamUsers: 'http://localhost:3000/get/spam/users',
+      deleteUser: 'http://localhost:3000/delete/user',
+      deleteMe: 'http://localhost:3000/user/delete',
+      deleteAdmin: 'http://localhost:3000/delete/admin',
+      getUsers: 'http://localhost:3000/get/users',
+      getAll: 'http://localhost:3000/get/all',
+      getAdmins: 'http://localhost:3000/get/admins',
+      getSuperAdmins: 'http://localhost:3000/get/superadmins'
+    }
+    var themeOptions = {
+      languages: 'en',
+      render: {
+        head_md: true,
+        readme_md: true,
+        desc: true,
+      }
+    }
+    window.gdconfig = JSON.parse(JSON.stringify({ version: authConfig.version, themeOptions: themeOptions }));
+    window.apiRoutes = routes;
+    window.quicklinks = quickLinks;
+    window.themeOptions = themeOptions;
+    window.gds = JSON.parse(
+      JSON.stringify(authConfig.roots.map((it) => it.name))
+    );
+    window.current_drive_order = 0;</script><script src=https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js></script><script src=https://cdn.jsdelivr.net/npm/vue-i18n@8.17.3/dist/vue-i18n.min.js></script><script src=https://cdn.jsdelivr.net/npm/vue-router@3.1.6/dist/vue-router.min.js></script><script src=https://cdn.jsdelivr.net/npm/vuex@3.4.0/dist/vuex.js></script><script src=https://cdn.jsdelivr.net/npm/axios@0.19.2/dist/axios.min.js></script><script src=https://cdn.jsdelivr.net/npm/element-ui@2.13.1/lib/index.js></script><script src=https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js></script><script src=https://cdn.jsdelivr.net/npm/js-cookie@2.2.1/src/js.cookie.min.js></script><script src=https://cdn.jsdelivr.net/npm/lowdb@1.0.0/dist/low.min.js></script><script src=https://cdn.jsdelivr.net/npm/lowdb@1.0.0/dist/LocalStorage.min.js></script><script src=https://cdn.jsdelivr.net/npm/markdown-it@10.0.0/dist/markdown-it.min.js></script><script src=https://at.alicdn.com/t/font_1760192_axq33n6snd.js></script></head><body><div id=app></div><script src=/app.js></script></body></html>

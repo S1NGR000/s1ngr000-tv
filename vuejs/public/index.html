@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+  <!-- CSS files accelerated by CDN, configured under vue.config.js -->
+  <% for (var i in htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.css) { %>
+  <link href="<%= htmlWebpackPlugin.options.cdn.css[i] %>" rel="preload" as="style">
+  <link href="<%= htmlWebpackPlugin.options.cdn.css[i] %>" rel="stylesheet">
+  <% } %>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <script>
+    var authConfig = {
+      version: '1.1.0',
+      roots: [
+        {
+          id: "",
+          name: "Glory to Heaven",
+          pass: "",
+        },
+        {
+          id: "",
+          name: "TeamDrive",
+          pass: "",
+        },
+        {
+          id: "",
+          name: "TeamDrive",
+          pass: "",
+        }
+      ],
+    };
+    var quickLinks = [
+      {
+        displayname: "Anime", // Name to Display
+        link: "Anime", // Note: This is Case Sensitive .Give Drive Folder Name Here from Default Drive.
+      },
+      {
+        displayname: "The Cinema :-)", // Name to Display
+        link: "Movies",
+      },
+      {
+        displayname: "Courses", // Name to Display
+        link: "Courses",
+      }
+    ]
+    var routes = {
+      checkEmail: 'http://localhost:3000/checkmail',
+      loginRoute: 'http://localhost:3000/login',
+      registerRoute: 'http://localhost:3000/register/user',
+      otpRegister: 'http://localhost:3000/register/approve/otp',
+      requestRoute: 'http://localhost:3000/request/user',
+      verifyRoute: 'http://localhost:3000/user/verify',
+      changePasswordRoute: 'http://localhost:3000/user/changepassword',
+      requestadminroute: 'http://localhost:3000/request/admin',
+      requestsuperadminroute: 'http://localhost:3000/request/superadmin',
+      getPendingUsers: 'http://localhost:3000/get/pending/users',
+      getPendingAdmins: 'http://localhost:3000/get/pending/admins',
+      getPendingSuperAdmins: 'http://localhost:3000/get/pending/superadmins',
+      upgradeAdmin: 'http://localhost:3000/register/approve/admin',
+      upgradeSuperAdmin: 'http://localhost:3000/register/approve/superadmin',
+      inviteUser: 'http://localhost:3000/invite/user',
+      inviteAdmin: 'http://localhost:3000/invite/admin',
+      inviteSuperAdmin: 'http://localhost:3000/invite/superadmin',
+      addSpamUser: 'http://localhost:3000/spam/user',
+      addSpamAdmin: 'http://localhost:3000/spam/admin',
+      getSpamUsers: 'http://localhost:3000/get/spam/users',
+      deleteUser: 'http://localhost:3000/delete/user',
+      deleteMe: 'http://localhost:3000/user/delete',
+      deleteAdmin: 'http://localhost:3000/delete/admin',
+      getUsers: 'http://localhost:3000/get/users',
+      getAll: 'http://localhost:3000/get/all',
+      getAdmins: 'http://localhost:3000/get/admins',
+      getSuperAdmins: 'http://localhost:3000/get/superadmins'
+    }
+    var themeOptions = {
+      languages: 'en',
+      render: {
+        head_md: true,
+        readme_md: true,
+        desc: true,
+      }
+    }
+    window.gdconfig = JSON.parse(JSON.stringify({ version: authConfig.version, themeOptions: themeOptions }));
+    window.apiRoutes = routes;
+    window.quicklinks = quickLinks;
+    window.themeOptions = themeOptions;
+    window.gds = JSON.parse(
+      JSON.stringify(authConfig.roots.map((it) => it.name))
+    );
+    window.current_drive_order = 0;
+  </script>
+  <!-- The JS file accelerated by CDN is configured under vue.config.js -->
+  <% for (var i in htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.js) { %>
+  <script src="<%= htmlWebpackPlugin.options.cdn.js[i] %>"></script>
+  <% } %>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="/app.js"></script>
+</body>
+
+</html>
