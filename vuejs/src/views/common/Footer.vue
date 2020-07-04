@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <div class="footpad footicons">
-        Github - <a class="icon-tag" href="https://github.com/tks18/gindex-v4">Shan.tk</a> | Support Me!
+        Github - <a class="icon-tag" href="https://github.com/S1NGR000/s1ngr000-tv/">S1NGR000 GitHub</a> | Support Me!
       </div>
       <div class="footpad footer-copyright">
         Copyright&nbsp;<i class="fas fa-copyright"></i> 2020 | &nbsp;{{ currgd.name }}
