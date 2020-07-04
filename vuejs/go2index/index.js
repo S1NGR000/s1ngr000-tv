@@ -1,58 +1,83 @@
 // =======Options START=======
 var authConfig = {
   siteName: "s1ngr000-tv",
-  version: "v7.4.0",
-  theme: "acrou",
-  github_name: 'tks18',
-  repo_name: 'gindex-v4',
-  backendSite: "https://s1ngr000-db.herokuapp.com", // Do Not Put '/' at the End
+  version: "v7.4.7",
+  favicon: "https://raw.githubusercontent.com/tks18/infozy/develop/favicon.ico",
   client_id: "202264815644.apps.googleusercontent.com",
   client_secret: "X4Z3ca8xfWDb1Voo-F9a7ZxJ",
   refresh_token: "1//0gXMWrtcKa04XCgYIARAAGBASNwF-L9IrCVqjqruRlY-x1lPtqQhj2LdGd9e1kVsVWMzUxqI74qHj9Z39wUqOJFRDI5q9zk818pw",
   roots: [
     {
-      id: "f0ADQPymcY2rzBUk9PVA",
-      name: "",
-      user: "",
-      pass: "",
+      id: "0ADQPymcY2rzBUk9PVA",
+      name: "Haguman",
       protect_file_link: true,
     }
   ],
   default_gd: 0,
-  files_list_page_size: 500,
+  files_list_page_size: 200,
   search_result_list_page_size: 50,
   enable_cors_file_down: false,
   enable_password_file_verify: true,
 };
+var quickLinks = [
+      {
+        displayname: "Anime", // Name to Display
+        link: "Anime", // Note: This is Case Sensitive .Give Drive Folder Name Here from Default Drive.
+      },
+      {
+        displayname: "English Movies", // Name to Display
+        link: "Movies English",
+      },
+      {
+        displayname: "Hindi Movies", // Name to Display
+        link: "Movies Hindi",
+      },
+      {
+        displayname: "English Series", // Name to Display
+        link: "Series English",
+      },
+      {
+        displayname: "Hindi Series", // Name to Display
+        link: "Series Hindi",
+      },
+      {
+        displayname: "Cartoons", // Name to Display
+        link: "Cartoons",
+      },
+      {
+        displayname: "Music", // Name to Display
+        link: "Music",
+      }
+    ]
 var routes = {
-  checkEmail: authConfig.backendSite + '/checkmail',
-  loginRoute: authConfig.backendSite + '/login',
-  registerRoute: authConfig.backendSite + '/register/user',
-  otpRegister: authConfig.backendSite + '/register/approve/otp',
-  requestRoute: authConfig.backendSite + '/request/user',
-  verifyRoute: authConfig.backendSite + '/user/verify',
-  changePasswordRoute: authConfig.backendSite + '/user/changepassword',
-  requestadminroute: authConfig.backendSite + '/request/admin',
-  requestsuperadminroute: authConfig.backendSite + '/request/superadmin',
-  getPendingUsers: authConfig.backendSite + '/get/pending/users',
-  getPendingAdmins: authConfig.backendSite + '/get/pending/admins',
-  getPendingSuperAdmins: authConfig.backendSite + '/get/pending/superadmins',
-  upgradeAdmin: authConfig.backendSite + '/register/approve/admin',
-  upgradeSuperAdmin: authConfig.backendSite + '/register/approve/superadmin',
-  inviteUser: authConfig.backendSite + '/invite/user',
-  inviteAdmin: authConfig.backendSite + '/invite/admin',
-  inviteSuperAdmin: authConfig.backendSite + '/invite/superadmin',
-  addSpamUser: authConfig.backendSite + '/spam/user',
-  addSpamAdmin: authConfig.backendSite + '/spam/admin',
-  getSpamUsers: authConfig.backendSite + '/get/spam/users',
-  deleteUser: authConfig.backendSite + '/delete/user',
-  deleteMe: authConfig.backendSite + '/deleteme',
-  deleteAdmin: authConfig.backendSite + '/delete/admin',
-  getUsers: authConfig.backendSite + '/get/users',
-  getAll: authConfig.backendSite + '/get/all',
-  getAdmins: authConfig.backendSite + '/get/admins',
-  getSuperAdmins: authConfig.backendSite + '/get/superadmins'
-}
+  checkEmail: 'https://tv-dbackend.herokuapp.com/checkmail',
+  loginRoute: 'https://tv-dbackend.herokuapp.com/login',
+  registerRoute: 'https://tv-dbackend.herokuapp.com/register/user',
+  otpRegister: 'https://tv-dbackend.herokuapp.com/register/approve/otp',
+  requestRoute: 'https://tv-dbackend.herokuapp.com/request/user',
+  verifyRoute: 'https://tv-dbackend.herokuapp.com/user/verify',
+  changePasswordRoute: 'https://tv-dbackend.herokuapp.com/user/changepassword',
+  requestadminroute: 'https://tv-dbackend.herokuapp.com/request/admin',
+  requestsuperadminroute: 'https://tv-dbackend.herokuapp.com/request/superadmin',
+  getPendingUsers: 'https://tv-dbackend.herokuapp.com/get/pending/users',
+  getPendingAdmins: 'https://tv-dbackend.herokuapp.com/get/pending/admins',
+  getPendingSuperAdmins: 'https://tv-dbackend.herokuapp.com/get/pending/superadmins',
+  upgradeAdmin: 'https://tv-dbackend.herokuapp.com/register/approve/admin',
+  upgradeSuperAdmin: 'https://tv-dbackend.herokuapp.com/register/approve/superadmin',
+  inviteUser: 'https://tv-dbackend.herokuapp.com/invite/user',
+  inviteAdmin: 'https://tv-dbackend.herokuapp.com/invite/admin',
+  inviteSuperAdmin: 'https://tv-dbackend.herokuapp.com/invite/superadmin',
+  addSpamUser: 'https://tv-dbackend.herokuapp.com/spam/user',
+  addSpamAdmin: 'https://tv-dbackend.herokuapp.com/spam/admin',
+  getSpamUsers: 'https://tv-dbackend.herokuapp.com/get/spam/users',
+  deleteUser: 'https://tv-dbackend.herokuapp.com/delete/user',
+  deleteMe: 'https://tv-dbackend.herokuapp.com/user/delete',
+  deleteAdmin: 'https://tv-dbackend.herokuapp.com/delete/admin',
+  getUsers: 'https://tv-dbackend.herokuapp.com/get/users',
+  getAll: 'https://tv-dbackend.herokuapp.com/get/all',
+  getAdmins: 'https://tv-dbackend.herokuapp.com/get/admins',
+  getSuperAdmins: 'https://tv-dbackend.herokuapp.com/get/superadmins'
+};
 var themeOptions = {
   languages: "en",
   render: {
@@ -62,6 +87,7 @@ var themeOptions = {
   },
 };
 // =======Options END=======
+
 
 /**
  * global functions
@@ -105,14 +131,23 @@ function html(current_drive_order = 0, model = {}) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
   <title>${authConfig.siteName}</title>
   <style>
-    @import url(https://cdn.jsdelivr.net/gh/tks18/gindex-v4@${authConfig.version}/vuejs/dist/style.css);
+    @import url(https://cdn.jsdelivr.net/gh/S1NGR000/s1ngr000-tv/vuejs/dist/style.css);
   </style>
-  <link rel="icon" sizes="57x57" href="https://raw.githubusercontent.com/tks18/infozy/develop/favicon.ico" />
+  <link rel="icon" sizes="57x57" href="${authConfig.favicon}" />
   <script>
     window.gdconfig = JSON.parse('${JSON.stringify({
       version: authConfig.version,
       themeOptions: themeOptions,
     })}');
+    window.quicklinks = JSON.parse('${JSON.stringify(
+      quickLinks.map((it) => {
+        var links = {
+          displayname: it.displayname,
+          link: it.link,
+        }
+        return links;
+      })
+    )}');
     window.apiRoutes = JSON.parse('${JSON.stringify(routes)}');
     window.themeOptions = JSON.parse('${JSON.stringify(themeOptions)}');
     window.gds = JSON.parse('${JSON.stringify(
@@ -122,9 +157,9 @@ function html(current_drive_order = 0, model = {}) {
     window.current_drive_order = ${current_drive_order};
   </script>
 </head>
-<body class="has-navbar-fixed-top">
+<body>
     <div id="app"></div>
-    <script src="https://cdn.jsdelivr.net/gh/${authConfig.github_name}/${authConfig.repo_name}@${authConfig.version}/vuejs/dist/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/S1NGR000/s1ngr000-tv/vuejs/dist/app.js"></script>
 </body>
 </html>
 `;
@@ -165,7 +200,7 @@ async function handleRequest(request) {
   function redirectToIndexPage() {
     return new Response("", {
       status: 301,
-      headers: { Location: `/${authConfig.default_gd}:/` },
+      headers: { Location: `/${authConfig.default_gd}:home/` },
     });
   }
 
@@ -176,7 +211,7 @@ async function handleRequest(request) {
   }
 
   // Special command format
-  const command_reg = /^\/(?<num>\d+):(?<command>[a-zA-Z0-9]+)(\/.*)?$/g;
+  const command_reg = /^\/(?<num>[\S]+):(?<command>[a-zA-Z0-9]+)(\/.*)?$/g;
   const match = command_reg.exec(path);
   let command;
   if (match) {

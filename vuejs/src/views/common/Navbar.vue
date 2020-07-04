@@ -97,7 +97,7 @@
           </a>
           <a
             class="navbar-item"
-            title="Movies"
+            title="Index"
             v-if="logged"
             @click="gotoPage('/')"
             @mouseover="mouseover = true"
@@ -106,7 +106,7 @@
            <span class="icon">
             <i :class="mouseover ? 'fas fa-spin fa-compact-disc' : 'fas fa-compact-disc'"></i>
           </span>
-          <span  class="is-hidden-desktop">Movies</span>
+          <span  class="is-hidden-desktop">Index</span>
           </a>
           <a
             class="navbar-item"
